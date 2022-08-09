@@ -100,7 +100,7 @@ class NotesService {
     return numOfDeletios;
   }
 
-  Future<void> deleteNode({required int id}) async {
+  Future<void> deleteNote({required int id}) async {
     await _ensureDbIsOpen();
     final db = _getDatabaseOrThrow();
     final deletedCount = await db.delete(
