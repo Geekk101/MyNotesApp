@@ -41,11 +41,17 @@ dependencies:
   sqflite: ^2.0.3+1
   path_provider: ^2.0.11
   path: ^1.8.2
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-    
+  flutter_launcher_icons: ^0.10.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/task.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

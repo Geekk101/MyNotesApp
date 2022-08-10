@@ -6,7 +6,7 @@ class NewNoteView extends StatefulWidget {
   const NewNoteView({Key? key}) : super(key: key);
 
   @override
-  State<NewNoteView> createState() => _NewNoteViewState();
+   _NewNoteViewState createState() => _NewNoteViewState();
 }
 
 class _NewNoteViewState extends State<NewNoteView> {
@@ -15,7 +15,8 @@ class _NewNoteViewState extends State<NewNoteView> {
   late final TextEditingController _textController;
 
   @override
-  void initState() {
+  void initState() { 
+    
     _notesService = NotesService();
     _textController = TextEditingController();
     super.initState();
@@ -49,7 +50,8 @@ class _NewNoteViewState extends State<NewNoteView> {
     return await _notesService.createNote(owner: owner);
   }
 
-  void _deleteNoteIfTextIsEmpty() {
+  void _deleteNoteIfTextIsEmpty() { 
+    
     final note = _note;
     if (_textController.text.isEmpty && note != null) {
       _notesService.deleteNote(id: note.id);
@@ -68,7 +70,8 @@ class _NewNoteViewState extends State<NewNoteView> {
   }
 
   @override
-  void dispose() {
+  void dispose() { 
+
     _deleteNoteIfTextIsEmpty();
     _saveNoteIfTextNotEmpty();
     _textController.dispose();
